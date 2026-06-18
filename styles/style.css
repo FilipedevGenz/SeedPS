@@ -1,0 +1,122 @@
+/* =========================================
+   TELA DE RECURSOS (PARTE DO DAVI)
+   ========================================= */
+
+/* Estilo geral da página de recursos */
+.recursos-container {
+    font-family: sans-serif;
+    background-color: var(--cor-fundo); /* Fundo oficial do grupo */
+    color: #333;
+    padding: 60px 20px;
+}
+
+/* Primeira Dobra (Hero Section) */
+.hero-recursos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    gap: 40px;
+}
+
+.texto-hero {
+    max-width: 600px;
+}
+
+.texto-hero .tag {
+    color: var(--cor-primaria); /* Amarelo oficial do grupo */
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.texto-hero h1 {
+    font-size: 42px;
+    color: #111;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.texto-hero .destaque-laranja {
+    color: var(--cor-primaria); /* Amarelo oficial do grupo */
+}
+
+.texto-hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.botao-laranja {
+    display: inline-block;
+    background-color: var(--cor-primaria); /* Amarelo oficial do grupo */
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.botao-laranja:hover {
+    opacity: 0.9;
+}
+
+.imagem-hero img {
+    max-width: 450px;
+    height: auto;
+}
+
+/* Seção de Cards (Funcionalidades) */
+.funcionalidades-secao {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tag-central {
+    color: var(--cor-primaria); /* Amarelo oficial do grupo */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.funcionalidades-secao h2 {
+    font-size: 36px;
+    margin: 10px 0 50px 0;
+    line-height: 1.2;
+}
+
+/* Grid para organizar os 6 cards (3 por linha no computador) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* O Estilo de cada Card Branco */
+.card-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra leve */
+}
+
+.icone-card {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.card-item p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+}

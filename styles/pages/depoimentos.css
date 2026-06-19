@@ -1,0 +1,119 @@
+/* reset da pagina*/
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #FFFFFF;
+  color: #1F2937;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.shape-top-right {
+  width: 280px;
+  height: 280px;
+  background: #F5A623;
+  top: -90px;
+  right: -90px;
+}
+.shape-bottom-left {
+  width: 220px;
+  height: 220px;
+  background: #F5A623;
+  bottom: -110px;
+  left: -70px;
+}
+.shape-bottom-right {
+  width: 280px;
+  height: 280px;
+  background: #FDEAB0;
+  bottom: -130px;
+  right: -30px;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 32px 40px;
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1F2937;
+  margin: 0 0 16px;
+}
+.hero-text h1 .accent {
+  color: #F5A623;
+}
+.hero-text p {
+  color: #6B7280;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* depoimentos */
+.depoimentos-section {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 32px 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.cards-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+.cards-list .idea-card {
+  width: 100%;
+}
+
+/* estados da lista */
+.loading-state,
+.empty-state,
+.error-state {
+  grid-column: 1 / -1;
+  width: 100%;
+  text-align: center;
+  color: #6B7280;
+  font-size: 14px;
+  padding: 40px 0;
+}
+.error-state {
+  color: #FF3B30;
+}
+
+/* ícones */
+.author svg,
+.delete-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 40px;
+  }
+  .hero-text h1 {
+    font-size: 30px;
+  }
+}

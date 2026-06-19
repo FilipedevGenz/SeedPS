@@ -1,0 +1,50 @@
+/* card */
+.idea-card {
+    width: 300px;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+.idea-card h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2C2C2C;
+    margin-bottom: 12px;
+}
+.idea-card p {
+    color: #4B5563;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+.card-footer {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #6B7280;
+    font-size: 14px;
+}
+.author svg {
+    color: #6B7280;
+}
+.delete-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #FF3B30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete-btn:hover {
+    opacity: .8;
+}

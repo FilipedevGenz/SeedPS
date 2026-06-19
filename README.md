@@ -355,3 +355,6 @@ A renderização da aplicação foi dividida em estados específicos:
 * `renderPosts()` — renderização da lista de postagens.
 
 Essa separação torna o fluxo de renderização mais previsível, melhora a organização do código e facilita futuras manutenções e evoluções da aplicação.
+
+## Link do site do github
+https://filipedevgenz.github.io/SeedPS/

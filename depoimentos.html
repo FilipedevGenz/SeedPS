@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depoimentos - Capital Duck</title>
+
+  <link rel="stylesheet" href="styles/cores.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/componentes/header.css">
+  <link rel="stylesheet" href="styles/componentes/footer.css">
+  <link rel="stylesheet" href="styles/componentes/form-card.css">
+  <link rel="stylesheet" href="styles/componentes/idea-card.css">
+  <link rel="stylesheet" href="styles/pages/depoimentos.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <div class="logo-container">
+        <a href="inicio.html">
+          <img src="assets/logos/logo_capitalduck.png" alt="Capital Duck">
+          <p>Capital <span>Duck</span></p>
+        </a>
+      </div>
+
+      <nav class="menu-desktop menu">
+        <ul>
+          <li><a href="inicio.html">Início</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="depoimentos.html" class="ativado">Depoimentos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="btn-cadastro">
+      <a href="#">Cadastre-se</a>
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+    <nav class="menu-mobile menu">
+      <ul>
+        <li><a href="inicio.html">Início</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="depoimentos.html" class="ativado">Depoimentos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <div class="btn-cadastro-mobile">
+        <a href="#">Cadastre-se</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+    <span class="shape shape-top-right" aria-hidden="true"></span>
+    <span class="shape shape-bottom-left" aria-hidden="true"></span>
+    <span class="shape shape-bottom-right" aria-hidden="true"></span>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Capital Duck <span class="accent">é nota mil!</span></h1>
+        <p>Veja como nossos usuários estão assumindo<br>o controle do próprio dinheiro!</p>
+      </div>
+    </section>
+
+    <section class="depoimentos-section">
+      <form class="form-card" id="post-form">
+        <p class="form-card-title">Deixe seu depoimento</p>
+        <input type="text" id="post-title" placeholder="Título" required maxlength="60">
+        <textarea id="post-content" placeholder="Conte sua experiência" required maxlength="280"></textarea>
+        <input type="text" id="post-author" placeholder="Seu nome" required maxlength="40">
+        <button type="submit">Publicar depoimento</button>
+      </form>
+
+      <div id="cards-list" class="cards-list">
+        <div class="loading-state">Carregando depoimentos...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <h1>Capital <span>Duck</span></h1>
+        </div>
+        <p>O Capital Duck te ajuda a organizar suas finanças, identificar gastos desnecessários e assumir o controle do seu dinheiro de um jeito simples.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="assets/icons/facebook-f-brands-solid-full.svg" alt="" width="16">
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img src="assets/icons/instagram-brands-solid-full.svg" alt="" width="16">
+          </a>
+          <a href="#" aria-label="Twitter">
+            <img src="assets/icons/twitter-brands-solid-full.svg" alt="" width="16">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h3>Links</h3>
+        <a href="inicio.html">Início</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="depoimentos.html">Depoimentos</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+
+      <div class="footer-download">
+        <h3>Baixe o app</h3>
+        <a href="#"><img src="assets/icons/apple-brands-solid.svg" alt="App Store"></a>
+        <a href="#"><img src="assets/icons/google-play-brands-solid.svg" alt="Google Play"></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Capital Duck. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="src/api/api.js"></script>
+ <script src="src/pages/depoimentos.js"></script> 
+</body>
+</html>

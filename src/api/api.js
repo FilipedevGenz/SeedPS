@@ -1,4 +1,6 @@
-import { API_URL, API_KEY } from "../config/config";
+const API_URL = 'https://blog-api.seedabit.org.br/api';
+
+const API_KEY = 'key-qxrrmif75j';
 
 const apiRequest = {
 
@@ -161,8 +163,4 @@ const apiRequest = {
       };
     }
   },
-  
 }
-
-
-export default apiRequest;

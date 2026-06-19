@@ -75,6 +75,28 @@
     height: auto;
 }
 
+.section1-indicadores {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    padding: 1rem 2rem;
+
+    background: var(--cor-primaria);
+    color: #000;
+
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    transition: .3s;
+
+    margin-top: 2rem;
+    justify-content: center;
+    color: var(--cor-primaria);
+}
+
 @media (max-width: 900px) {
     .section1 {
         flex-direction: column;

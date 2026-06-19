@@ -4,27 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ - Capital Duck</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/componentes/header.css">
+    <link rel="stylesheet" href="styles/componentes/footer.css">
     <link rel="stylesheet" href="styles/cores.css">
     <link rel="stylesheet" href="styles/style.css"> 
 </head>
 <body>
 
-    <header>
-        <div class="logo-container">
-            <a href="index.html"><img src="assets/logos/logo_capitalduck.png" alt="Logo Capital Duck"></a>
-        </div>
+<header class="header">
+        <div class="header-left">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/logos/logo_capitalduck.png" alt="">
+                    <p>Capital <span>Duck</span></p>
+                </a>
+            </div>
 
-        <nav class="menu-desktop">
+            <div class="menu-container">
+                <nav class="menu menu-desktop">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="recursos.html">Recursos</a></li>
+                        <li><a href="depoimentos.html">Depoimentos</a></li>
+                        <li><a href="faq.html" class="ativado">FAQ</a></li> </ul>
+                </nav>
+            </div> </div> <nav class="menu menu-mobile">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="recursos.html">Recursos</a></li>
                 <li><a href="depoimentos.html">Depoimentos</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
+                <li><a href="faq.html" class="ativado">FAQ</a></li> </ul>
+
+            <div class="btn-cadastro-mobile"><a href=""><img src="assets/icons/icon_download.png" alt="">Cadastre-se</a></div>
         </nav>
 
-        <div class="btn-cadastro"></div>
+        <div class="btn-cadastro"><a href=""><img src="assets/icons/icon_download.png" alt="">Cadastre-se</a></div>
+
+        <button class="menu-toggle">
+            ☰
+        </button>
     </header>
+
     <main class="faq-container">
         <section class="hero-faq">
             <div class="texto-hero">

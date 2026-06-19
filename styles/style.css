@@ -126,65 +126,86 @@
 
 /* Estilo geral da página de faq */
 .faq-container {
-    font-family: sans-serif;
-    background-color: var(--cor-fundo); /* Fundo oficial do grupo */
-    color: #333;
-    padding: 60px 250px;
+    width: 100%; /* Força a ocupar a tela toda */
+    background-color: var(--cor-fundo); 
+    padding: 60px 0; /* Tira o padding lateral que esmagava */
 }
-/* Estilo base de cada Card */
-.faq-card {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 16px;
-  margin-bottom: 16px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  cursor: pointer;
-  transition: all 0.2s ease;
+
+/* Limitar as seções internas para o conteúdo não espalhar demais */
+.hero-faq, .categorias-secao, .perguntas-secao {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Mantém uma folga segura nas laterais em telas menores */
 }
+
 /* Primeira Dobra (Hero Section) */
 .hero-faq {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto 80px auto;
+    width: 100%;
+    margin: 0 auto 100px auto; 
     gap: 40px;
 }
-.faq-card[open] {
-  border: 2px solid #FDBA22; /* Borda amarela em volta */
-  border-left: 8px solid #FDBA22; /* Faixa amarela mais grossa na esquerda */
-}
 
-.faq-card[open] .faq-title {
-  color: #FDBA22; /* Muda a cor do título quando aberto */
-}
-/* Container que faz o desenho da pílula */
+/* Container da busca (Pílula) */
 .search-container {
   display: flex;
   align-items: center;
-  border: 2px solid #FDBA22; /* Cor da borda amarela/laranja */
-  border-radius: 50px;       /* Deixa as laterais totalmente arredondadas */
-  padding: 12px 24px;        /* Espaçamento interno */
+  border: 2px solid #FDBA22; 
+  border-radius: 50px;       
+  padding: 12px 24px;        
   background-color: #ffffff;
-  max-width: 650px;          /* Limita a largura máxima do campo */
-  margin: 20px auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02); /* Sombra bem sutil */
+  width: 100%;               /* Ocupa o espaço disponível até o limite máximo */
+  max-width: 650px;          
+  margin: 30px auto;         
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02); 
 }
+
 /* Estilo do ícone de busca dentro da pílula */     
 .search-icon {
   width: 22px;
   height: 22px;
-  margin-right: 14px;        /* Afasta a lupa do texto */
-  flex-shrink: 0;            /* Impede a lupa de esmagar em telas menores */
+  margin-right: 14px;        
+  flex-shrink: 0;            
 }
 
 /* Estilização do campo de digitação */
 .search-input {
-  border: none;              /* Remove a borda padrão do input */
-  outline: none;             /* Remove a linha azul ao clicar */
+  border: none;              
+  outline: none;             
   width: 100%;
   font-size: 16px;
   color: #4a4a4a;
   font-family: 'Arial', sans-serif;
+}
+
+/* Seções do FAQ (Categorias e Perguntas) */
+.categorias-secao, .perguntas-secao {
+    margin-bottom: 90px; 
+}
+
+/* Seleciona o título H2 apenas dentro da seção de perguntas */
+.perguntas-secao h2 {
+    margin-bottom: 40px; /
+}
+
+/* Grid Responsivo das Categorias */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; 
+    margin-top: 40px; /* Espaço entre o título da seção e os cards */
+}
+
+/* Estilo base de cada Card (Perguntas e Categorias) */
+.faq-card, .card-item {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  margin-bottom: 24px; 
+  padding: 24px;       
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  transition: all 0.2s ease;
 }

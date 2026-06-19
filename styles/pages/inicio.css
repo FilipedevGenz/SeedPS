@@ -1,0 +1,291 @@
+.section1 {
+    width: 100%;
+    min-height: calc(100vh - 250px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+    padding: 0 8% ;
+}
+
+.section1-left {
+    flex: 1;
+    max-width: 550px;
+}
+
+.section1-left h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.section1-left h1 span {
+    color: var(--cor-primaria);
+}
+
+.section1-left p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--);
+
+    margin-bottom: 2rem;
+}
+
+.section1-left a {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    padding: 1rem 2rem;
+
+    background: var(--cor-primaria);
+    color: #000;
+
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+.section1-left a:hover {
+    transform: translateY(-3px);
+}
+
+.section1-left a img {
+    width: 28px;
+}
+
+.section1-right {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.section1-right img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .section1 {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+    .section1-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1-left p {
+        max-width: 500px;
+    }
+
+    .section1-right img {
+        max-width: 320px;
+    }
+}
+
+/* seção do funcionamento */
+
+.section-funcionamento {
+    padding: 2rem 6rem 8%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section-funcionamento h2 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+
+.section-subtitle {
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.guia-funcionamento {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.passo {
+    width: 220px;
+}
+
+.passo-icon {
+    width: 140px;
+    height: 140px;
+
+    margin: 0 auto 1.5rem;
+
+    border-radius: 50%;
+    background: var(--cor-secundaria);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passo-icon img {
+    width: 70px;
+}
+
+.passo h3 {
+    font-size: 1.5rem;
+    margin-bottom: .75rem;
+}
+
+.passo p {
+    color: var(--cinza);
+    line-height: 1.5;
+}
+
+.seta {
+    font-size: 5rem;
+    color: #b0b0b0;
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+
+    .guia-funcionamento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seta {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+}
+
+/* seção de contato */
+
+.section-contato {
+    width: 100%;
+    padding: 6rem 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.depoimentos,
+.contato {
+    background: var(--color-surface);
+    padding: 2rem;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.depoimentos h2,
+.contato h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.depoimento-texto {
+    max-width: 400px;
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+.usuario img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usuario h3 {
+    font-size: 1.1rem;
+}
+
+.usuario span {
+    color: var(--color-text-secondary);
+    font-size: .9rem;
+}
+
+.indicadores {
+    display: flex;
+    gap: .75rem;
+    margin-top: 2rem;
+}
+
+.indicadores span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+
+    background: #d0d0d0;
+}
+
+.indicadores .ativo {
+    background: #777;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-contato {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+
+    background: #f3f3f3;
+    border-radius: 12px;
+
+    text-decoration: none;
+    color: #9a9a9a;
+
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .section-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .depoimentos h2,
+    .contato h2 {
+        font-size: 2rem;
+    }
+
+    .btn-contato {
+        min-height: 140px;
+    }
+}

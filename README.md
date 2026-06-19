@@ -290,12 +290,13 @@ Esse padrão elimina a necessidade de a camada de interface depender diretamente
 ---
 
 # Estratégia de Tratamento de Exceções
+# Estratégia de Tratamento de Exceções
 
-Durante o desenvolvimento foi adotada a decisão de **não propagar exceções (`throw`) para as camadas superiores da aplicação**. Em vez disso, toda operação retorna um objeto padronizado contendo o resultado da requisição.
+Foi escolhido a decisão de **não propagar exceções (`throw`)**. Preferimos retornar um objeto com o resultado da requisição.
 
-Essa estratégia foi escolhida porque falhas como respostas HTTP inválidas, indisponibilidade da API ou erros de rede fazem parte do fluxo esperado da aplicação e podem ser tratadas diretamente pelo código consumidor, sem interromper a execução através de exceções.
+Essa decisão técnica foi tomada, visando não levantar erros quando o evento ocorrido for algo que faz parte do fluxo (input indevido, não encontrar o objeto etc) preferimos apenas subir erros quando algo que realmente não faz sentido dentro do fluxo do sistema acontecer.
 
-Além de simplificar o consumo da API, essa abordagem favorece o desempenho do código executado pelo motor **V8** (utilizado pelo Node.js e pelos navegadores baseados em Chromium). A criação e propagação de exceções envolve a captura da stack trace e pode limitar algumas otimizações realizadas pelo compilador Just-In-Time (JIT). Ao reservar o mecanismo de exceções apenas para falhas realmente inesperadas, mantém-se um fluxo de execução mais previsível e potencialmente mais eficiente.
+A justificativa técnica para isso, é visando que o **V8** (motor do node.Js/navegadores) seja favorecido, visto que ao levantar uma exception, é capturado o stack trace e isso limita otimizações do compilador.
 
 Com isso, a interface precisa apenas verificar o campo `success`, tornando o código mais limpo, consistente e de fácil manutenção.
 

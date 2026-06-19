@@ -4,12 +4,7 @@
 
 Este projeto foi desenvolvido utilizando **HTML**, **CSS** e **JavaScript**, realizando a integração com uma API REST responsável pelo gerenciamento de postagens de um blog ou mural de depoimentos.
 
-A API fornece funcionalidades para:
-
-* Verificação de disponibilidade do serviço (Health Check);
-* Listagem de postagens;
-* Criação de novas postagens;
-* Exclusão de postagens.
+A API permite funcionalidades para listar, criar e deletar postagens.
 
 A URL base da API é:
 
@@ -30,8 +25,7 @@ const API_KEY = "key-XXXXXXXX";
 
 Onde:
 
-* **API_URL** representa a URL base da API.
-* **API_KEY** corresponde à chave utilizada para autenticação das requisições protegidas.
+ **API_URL** representa a URL base da API e**API_KEY** corresponde à chave utilizada para autenticação das requisições protegidas.
 
 ---
 
@@ -307,70 +301,6 @@ Com isso, a interface precisa apenas verificar o campo `success`, tornando o có
 
 ---
 
-# Fluxo da Aplicação
-
-## Carregamento inicial
-
-```
-DOMContentLoaded
-        │
-        ▼
-loadPosts()
-        │
-        ▼
-apiRequest.getPosts()
-        │
-        ▼
-GET /posts
-        │
-        ▼
-renderPosts()
-```
-
----
-
-## Criação de postagem
-
-```
-Usuário envia formulário
-        │
-        ▼
-createPost()
-        │
-        ▼
-POST /posts
-        │
-        ▼
-Sucesso
-        │
-        ▼
-loadPosts()
-        │
-        ▼
-Atualização automática da lista
-```
-
----
-
-## Exclusão de postagem
-
-```
-Usuário clica em excluir
-        │
-        ▼
-Confirmação
-        │
-        ▼
-deletePost(id)
-        │
-        ▼
-DELETE /posts/{id}
-        │
-        ▼
-Elemento removido do DOM
-```
-
----
 
 # Boas Práticas Adotadas
 

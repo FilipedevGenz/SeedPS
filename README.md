@@ -290,7 +290,6 @@ Esse padrão elimina a necessidade de a camada de interface depender diretamente
 ---
 
 # Estratégia de Tratamento de Exceções
-# Estratégia de Tratamento de Exceções
 
 Foi escolhido a decisão de **não propagar exceções (`throw`)**. Preferimos retornar um objeto com o resultado da requisição.
 
